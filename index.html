@@ -105,7 +105,7 @@
                       <p class="home-page-description">Développeur Web/mobile</p>
                     </div>
                     <div>
-                      <p class="home-page-description">Html/css Javascript mysql php ruby</p>
+                      <p class="home-page-description">Html/css Javascript mysql postgreSQL ruby react</p>
                     </div>
                     <div>
                       <p class="home-page-description">En recherche d'emploi/alternance</p>
@@ -114,7 +114,7 @@
 
                   <div class="block end" style="text-align: center">
                     <ul class="info-list">
-                      <li><span class="title">Age</span><span class="value">22 ans</span></li>
+                      <li><span class="title">Age</span><span class="value" id="birthdate"></span></li>
                       <li><span class="title">e-mail</span><span class="value"><a href="mailto:vilette.nicolas1@gmail.com">vilette.nicolas1@gmail.com</a></span></li>
                     </ul>
                   </div>
@@ -135,7 +135,7 @@
                   <div class="general-info">
                     <h3>Développeur web/mobile</h3>
                     <p>D’un plan professionnel, je m’intéresse énormément à autrui. J’aime partager mes connaissances et apprendre des autres. </p>
-                    <p>Actuellement en recherche d'emploi/alternance en tant que développeur. </p>
+                    <p>Actuellement en CDI en tant que développeur. </p>
                   </div>
             </div>
 
@@ -223,6 +223,23 @@
 
               <div class="row">
                 <div class="col-sm-6 col-md-6 subpage-block">
+
+                  <div class="block-title">
+                    <h3>Formation personnelle</h3>
+                  </div>
+                  <div class="timeline">
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2020</h5>
+                      <h4 class="event-name">Formation personnelle sur le framework Reactjs</h4>
+                      <p>Création d'une API ruby on rails avec pour front end Reactjs avec authenfication.</p>
+                    </div>
+
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">2020</h5>
+                      <h4 class="event-name">Formation personnelle sur le framework React-native</h4>
+                      <p>Apprentissage du framework React-native pour la création d'application mobile.</p>
+                    </div>
+
                   <div class="block-title">
                     <h3>Etudes</h3>
                   </div>
@@ -257,13 +274,39 @@
                     </div>
                   </div>
                 </div>
-
+              </div>
                 <div class="col-sm-6 col-md-6 subpage-block">
                   <div class="block-title">
                     <h3>Experience</h3>
                   </div>
                   <div class="timeline">
                     <!-- Single event -->
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">septembre 2018 - Aujourd'hui</h5>
+                      <h4 class="event-name">Développeur d'application Web Ruby on Rails</h4>
+                      <span class="event-description">R2S Alarmes & Vidéoprotection</span>
+                      <p>
+                         Création d'un CRM pour de la gestion client, outil qui sert notamment à avoir un visuel de la vie d'un client (Service après-vente, intervention, devis, installation).<br>
+                         Configuration d'un rasberry pour l'affichage en temps réel de données utiles au fonctionnement de l'entreprise. <br>
+                         Gestion d'une flotte tablette et mobile android et apple. <br>
+                         Gestion de serveurs Debian et Ubuntu, installation de ceux-ci et configuration.<br>
+                         Gestion d'un site WordPress.<br>
+                         Gestion du réseau interne (Attribution d'Ip, imprimante, répéteur wifi).<br>
+                         Création logo.
+                         Création de vidéo de présentation.
+                      </p>
+                    </div>
+
+                    <div class="timeline-event te-primary">
+                      <h5 class="event-date">Avril 2018 - Aout 2018 </h5>
+                      <h4 class="event-name">Plombier chauffagiste</h4>
+                      <span class="event-description">Val ti - Chantier Paris</span>
+                      <p>Installation et gestion d'une chaufferie.<br>
+                        Installation des évacuations.<br>
+                        Pose des sanitaires.<br>
+                      </p>
+                    </div>
+
                     <div class="timeline-event te-primary">
                       <h5 class="event-date">Janvier 2018 - Mars 2018</h5>
                       <h4 class="event-name">Stage Developpeur</h4>
@@ -282,14 +325,18 @@
                       <h5 class="event-date">Mai 2017 - Aout 2017</h5>
                       <h4 class="event-name">Plombier chauffagiste</h4>
                       <span class="event-description">Val ti</span>
-                      <p>Monteur installateur dans le domaine de la plomberie.</p>
+                      <p>Monteur installateur dans le domaine de la plomberie. <br>
+                        Création d'une chaufferie et gestion du chantier.
+                      </p>
                     </div>
                     <!-- Single event -->
                     <div class="timeline-event te-primary">
-                      <h5 class="event-date">Dec 2016 - Fev 2017</h5>
+                      <h5 class="event-date">Sept 2016 - Avril 2017</h5>
                       <h4 class="event-name">Plombier chauffagiste</h4>
                       <span class="event-description">Snd</span>
-                      <p>Monteur istallateur dans le domaine de la plomberie.</p>
+                      <p>Monteur installateur dans le domaine de la plomberie.<br>
+                        Création et rénovation de salle de bain.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -316,6 +363,14 @@
     <script src="js/jquery.magnific-popup.min.js"></script>
     <script src="js/jquery.hoverdir.js"></script>
     <script src="js/main.js"></script>
+    <script type="text/javascript">
+      var currentTime = new Date();
+      var current_year = currentTime.getFullYear();
+      var birthdate = 1996;
+      var age = current_year - birthdate
+
+      document.getElementById("birthdate").innerHTML = age + " " + "ans";
+    </script>
 
   </body>
 </html>
